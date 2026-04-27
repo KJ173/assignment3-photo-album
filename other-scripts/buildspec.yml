@@ -1,15 +1,12 @@
 version: 0.2
 
 phases:
-  install:
-    commands:
-      - echo Installing...
-
   build:
     commands:
-      - echo Build started...
-      - ls
+      - echo "Preparing frontend files..."
+      - ls -la frontend
 
 artifacts:
+  base-directory: frontend
   files:
     - '**/*'

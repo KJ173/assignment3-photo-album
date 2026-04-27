@@ -1,4 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    padding: 20px;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+.hero {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.18);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    margin: 10px 0;
+    font-size: 36px;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.team-card {
+    margin: 25px auto 0;
+    background: white;
+    color: #1f2937;
+    max-width: 360px;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.team-card h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 950px;
+    margin: -30px auto 40px;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 18px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #1e3a8a;
+}
+
+.section-text {
+    color: #6b7280;
+}
+
+.input-row,
+.upload-box {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+
+input[type="text"],
+input[type="file"] {
+    flex: 1;
+    min-width: 240px;
+    padding: 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.examples {
+    margin-top: 15px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.examples span {
+    display: inline-block;
+    background: #e0ecff;
+    color: #1e40af;
+    padding: 6px 10px;
+    margin: 5px;
+    border-radius: 999px;
+}
+
+.results {
+    min-height: 80px;
+    background: #f9fafb;
+    border: 1px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.empty {
+    color: #6b7280;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+footer {
+    text-align: center;
+    color: #6b7280;
+    padding: 25px;
 }

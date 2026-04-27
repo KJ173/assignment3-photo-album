@@ -1,24 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Photo Album</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3 Photo Album</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Photo Album</h1>
+    <header class="hero">
+        <div class="badge">Cloud Computing</div>
+        <h1>Assignment 3: Photo Album</h1>
+        <p>
+            Search and upload photos using AWS S3, Lambda, Rekognition, API Gateway,
+            Lex, OpenSearch, CloudFormation, and CodePipeline.
+        </p>
 
-    <input type="text" id="searchBox" placeholder="Search photos">
-    <button onclick="searchPhotos()">Search</button>
+        <div class="team-card">
+            <h2>Team Members</h2>
+            <p><strong>VK2772</strong> and <strong>KJ2739</strong></p>
+        </div>
+    </header>
 
-    <br><br>
+    <main class="container">
+        <section class="card">
+            <h2>Search Photos</h2>
+            <p class="section-text">
+                Search using independent labels, grouped labels, or custom labels.
+            </p>
 
-    <input type="file" id="photoUpload">
-    <input type="text" id="customLabels" placeholder="Custom labels">
-    <button onclick="uploadPhoto()">Upload</button>
+            <div class="input-row">
+                <input type="text" id="searchBox" placeholder="Example: cat, dog, beach, diagram">
+                <button onclick="searchPhotos()">Search</button>
+            </div>
 
-    <br><br>
+            <div class="examples">
+                Try: <span>cat</span> <span>dog and park</span> <span>custom label</span>
+            </div>
+        </section>
 
-    <div id="results"></div>
+        <section class="card">
+            <h2>Upload New Photo</h2>
+            <p class="section-text">
+                Upload an image and optionally add custom labels separated by commas.
+            </p>
+
+            <div class="upload-box">
+                <input type="file" id="photoUpload" accept="image/*">
+                <input type="text" id="customLabels" placeholder="Custom labels: Sam, beach, vacation">
+                <button onclick="uploadPhoto()">Upload Photo</button>
+            </div>
+        </section>
+
+        <section class="card results-card">
+            <h2>Search Results</h2>
+            <div id="results" class="results">
+                <p class="empty">Search results will appear here.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Assignment 3 Photo Album | VK2772 & KJ2739</p>
+    </footer>
 
     <script src="app.js"></script>
 </body>

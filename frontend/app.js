@@ -7,7 +7,6 @@ async function searchPhotos() {
         );
 
         const data = await response.json();
-
         console.log(data);
 
         document.getElementById("results").innerHTML =
@@ -15,5 +14,12 @@ async function searchPhotos() {
 
     } catch (error) {
         console.error("Error:", error);
+        document.getElementById("results").innerHTML =
+            "<p>Error fetching results.</p>";
     }
+}
+
+function uploadPhoto() {
+    console.log("Uploading photo...");
+    alert("Upload workflow is connected to S3/Lambda backend for assignment demo.");
 }

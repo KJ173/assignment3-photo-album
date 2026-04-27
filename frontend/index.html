@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Album</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Photo Album</h1>
+
+    <input type="text" id="searchBox" placeholder="Search photos">
+    <button onclick="searchPhotos()">Search</button>
+
+    <br><br>
+
+    <input type="file" id="photoUpload">
+    <input type="text" id="customLabels" placeholder="Custom labels">
+    <button onclick="uploadPhoto()">Upload</button>
+
+    <br><br>
+
+    <div id="results"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

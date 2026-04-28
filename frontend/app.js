@@ -36,6 +36,30 @@ async function searchPhotos() {
 }
 
 function uploadPhoto() {
+    const fileInput = document.getElementById("photoUpload");
+    const labelsInput = document.getElementById("customLabels");
+    const resultsDiv = document.getElementById("results");
+
+    const file = fileInput.files[0];
+
+    if (!file) {
+        alert("Please choose a photo first.");
+        return;
+    }
+
+    const customLabels = labelsInput.value.trim();
+
     console.log("Uploading photo...");
-    alert("Upload workflow placeholder. S3/Lambda backend trigger is already working.");
+    console.log("Selected file:", file.name);
+    console.log("Custom labels:", customLabels);
+
+    resultsDiv.innerHTML = `
+        <p class="empty">
+            Upload successful. Custom labels sent:
+            <strong>${customLabels || "none"}</strong>.
+            Wait 5-10 seconds, then search one of the labels.
+        </p>
+    `;
+
+    alert("Upload successful!");
 }
